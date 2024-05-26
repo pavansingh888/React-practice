@@ -9,7 +9,10 @@ function MyApp(){
     </div>
   )
 }
-//<MyApp /> - How this syntax in jsx - In every react app a bundler is used. babble/transpiler is there and vite also uses bundler -  its work is to syntax improvement/upgradation. So below syntax conversion is also handled by bundler. Although HTML syntax is easy but react doesn't under it. That's why it is called JSX because HTML is mixed inside JS. So HTML syntax is parsed and converted into tree by bundler. 
+//<MyApp /> - How this syntax in jsx - In every react app a bundler is used. babble/transpiler is there and vite also uses bundler -  its work is to syntax improvement/upgradation. So below syntax conversion is also handled by bundler. Although HTML syntax is easy but react doesn't understand it. That's why it is called JSX because HTML is mixed inside JS. So HTML syntax is parsed and converted into tree by bundler. 
+
+//Transpiler (Babel): Converts modern JavaScript/JSX into ES5 to ensure cross-browser compatibility.
+//Bundler (Webpack): Combines the transpiled code and other assets into optimized bundles for efficient loading.
 
 // const ReactElement = {
 //   type: 'a',
