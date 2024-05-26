@@ -9,5 +9,10 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- 
+    Inside vite there is no react script in package.json, so who will inject script in HTML? 
+    Here index.html is outside - not in public folder.
+    and they have loaded script directly in HTML. So it is bit light since react script and testing libraries will not be installed in Vite.
+  -->
   </body>
 </html>
