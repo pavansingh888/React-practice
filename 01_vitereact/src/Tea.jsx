@@ -1,4 +1,10 @@
 /*
+We make folder structured.
+Fist we make the individual components.
+Then we combine individual components into a new component.
+Then we use that new component in our App.
+This how hierarchy is built in react.
+
 Vite react App - 
 Component name Capital.
 Component file can capital is good practice.
