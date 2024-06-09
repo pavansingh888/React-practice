@@ -6,14 +6,16 @@ export default function TodoList(){
     let [newTodo,setnewTodo]=useState("");
 
     let addNewTask = ()=>{
-        // console.log("add new task in todo");
-        settodos([...todos,{task: newTodo,id : uuidv4()}])
-        setnewTodo("")
+        settodos((prevTodo)=>{ return [...prevTodo,{ task: newTodo,id : uuidv4() }] })
+        setnewTodo("") 
     }
     let updateTodoValue = (event)=>{
-        // console.log(event.target.value);
         setnewTodo(event.target.value)
     }
+    let deleteTodo = (id) => {     
+        settodos((prevTodo) => prevTodo.filter((todo) => todo.id != id))
+        }
+    
     return (
         <div>
             <input placeholder="add a task" value={newTodo} onChange={updateTodoValue}></input>
@@ -25,7 +27,12 @@ export default function TodoList(){
             <ul>
                 {
                 todos.map((todo)=>{
-                   return <li key={todo.id}>{todo.task}</li> 
+                   return <li key={todo.id}>
+                   <span>{todo.task}</span>
+                   &nbsp;&nbsp;&nbsp;
+                   <button onClick={() => deleteTodo(todo.id) //Arrow function doesn't execute the function but simply create a copy of that function.
+                   }>Delete</button> 
+                   </li> 
                 })
                 }
             </ul>
