@@ -1,6 +1,7 @@
 import { LudoBoard } from './LudoBoard'
 import './App.css'
 import TodoList from './TodoList'
+import LotteryGame from './LotteryGame'
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       {/* <LudoBoard/> */}
-      <TodoList/>
+      {/* <TodoList/> */}
+      <LotteryGame/>
     </>
   )
 }
