@@ -10,7 +10,7 @@ function App() {
     <>
       {/* <LudoBoard/> */}
       {/* <TodoList/> */}
-      <LotteryGame/>
+      <LotteryGame n={3} winningSum={15}/>
     </>
   )
 }
