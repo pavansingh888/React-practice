@@ -6,19 +6,18 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import "./InfoBox.css"
+import env from "dotenv"
 
 export default function InfoBox({info}){
-    const INIT_URL= "https://plus.unsplash.com/premium_photo-1667239532950-db28085dacd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGF6ZSUyMHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D"
-    const HOT_URL = "https://images.unsplash.com/photo-1524594081293-190a2fe0baae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG90JTIwd2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D"
-    const COLD_URL = "https://images.unsplash.com/photo-1612208695882-02f2322b7fee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sZCUyMHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D"
-    const RAIN_URL = "https://images.unsplash.com/photo-1493314894560-5c412a56c17c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFpbnklMjB3ZWF0aGVyfGVufDB8fDB8fHww"
+
+    console.log(import.meta.env.VITE_COLD_URL,import.meta.env.VITE_RAIN_URL);
     return (
         <div className="InfoBox">
             <div className='cardContainer'>
             <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={info.humidity > 80 ? RAIN_URL : (info.temp < 15 ? COLD_URL : HOT_URL )}
+        image={info.humidity > 80 ? import.meta.env.VITE_RAIN_URL : (info.temp < 15 ? import.meta.env.VITE_COLD_URL : import.meta.env.VITE_HOT_URL )}
         title="green iguana"
       />
       <CardContent>

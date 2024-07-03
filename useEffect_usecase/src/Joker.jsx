@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+
 export default function Joker(){
+    
     let [joke,setJoke]=useState({})
     const URL = "https://official-joke-api.appspot.com/random_joke" 
     const getNewJoke = async () => {
