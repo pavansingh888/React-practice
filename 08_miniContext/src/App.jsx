@@ -8,8 +8,8 @@ function App() {
   return (
     <UserContextProvider>
       <h1>React Context API</h1>
-      <Login/> //setting value in UserContext
-      <Profile/> //accessing value form UserContext
+      <Login/> 
+      <Profile/> 
     </UserContextProvider>
   )
 }

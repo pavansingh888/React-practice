@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import UserContext from '../context/UserContext'
 
 function Profile() {
+    //accessing value form UserContext
     const {user} = useContext(UserContext)
   
     //conditional return
